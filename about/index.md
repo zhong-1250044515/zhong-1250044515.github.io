@@ -1,37 +1,31 @@
 ---
 layout: page
-title: About the Theme
+title: 关于我
 tags: [about, Jekyll, theme, moon]
 date: 2016-03-21
 comments: false
 ---
-    
-<center><a href="http://taylantatli.github.io/Moon"><b>Moon</b></a> is a minimal, one column jekyll theme.</center>
+## About Me
+Hello~ 我叫俊钟，也可以叫我小白，这是我的个人博客。
 
-## Features
-* Minimal, you can focus on your content
-* Responsive
-* Disqus integration
-* Syntax highlighting
-* Optional post image
-* Social icons
-* Page for sharing projects
-* Optional background image
-* Simple navigation menu
-* MathJax support
+我是从事互联网工作的一名小小的 PHPer，有点代码洁癖，喜欢折腾各种感兴趣的开源项目，因为折腾成功后的反馈会让我很兴奋~
 
-## Preview
+平时喜欢打打羽毛球，看看小说，追下热映的电影，开心最重要~
 
-{% capture images %}
-    https://cloud.githubusercontent.com/assets/754514/14509720/61c61058-01d6-11e6-93ab-0918515ecd56.png
-    https://cloud.githubusercontent.com/assets/754514/14509716/61ac6c8e-01d6-11e6-879f-8308883de790.png
-{% endcapture %}
-{% include gallery images=images caption="Screenshots of Moon Theme" cols=2 %}
+如果你有任何问题，请给我发送邮件：wjzhandsome@gmail.com，很高兴认识你 😀
 
-See a [live version of Moon](http://taylantatli.github.io/Moon) hosted on GitHub.
+## Skills
+掌握以下技能：
+* 规范：PSR-2，PSR-4，phpDocumentor
+* 版本管理：git，svn，git Flow
+* web 安全：身份认证劫持，XSS，CSRF，授权逃避，sql 注入，异常敏感信息暴露，文件上传攻击
+* 身份认证：HTTP Basic，access_token，JWT，api key 签名，OAuth2.0
+* 框架：Laravel5.5，ThinkPHP5，ThinkPHP3.2
+* redis，socket
+* RESTful API，postman，Rap 接口管理
+* 项目管理
+* nginx，shell，homestead
+正在捣鼓的东西：
+* docker
+* elasticsearch
 
-## Getting Started
-
-To learn how to install and use this theme check out the [Setup Guide](http://taylantatli.me/Moon/moon-theme/) for more information.
-      
-[Install Moon](https://github.com/TaylanTatli/Moon){: .btn}
