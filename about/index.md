@@ -15,6 +15,7 @@ Hello~ 我叫俊钟，也可以叫我小白，这是我的个人博客。
 如果你有任何问题，请给我发送邮件：wjzhandsome@gmail.com，很高兴认识你 😀
 
 ## Skills
+
 掌握以下技能：
 * 规范：PSR-2，PSR-4，phpDocumentor
 * 版本管理：git，svn，git Flow
@@ -25,6 +26,7 @@ Hello~ 我叫俊钟，也可以叫我小白，这是我的个人博客。
 * RESTful API，postman，Rap 接口管理
 * 项目管理
 * nginx，shell，homestead
+
 正在捣鼓的东西：
 * docker
 * elasticsearch
