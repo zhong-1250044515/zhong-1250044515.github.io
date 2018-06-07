@@ -4,6 +4,7 @@ title: 关于我
 tags: [about, Jekyll, theme, moon]
 date: 2016-03-21
 comments: false
+feature: assets/img/about/wallhaven-193651.jpg
 ---
 Hello~ 我叫俊钟，也可以叫我小白，这是我的个人博客。
 
