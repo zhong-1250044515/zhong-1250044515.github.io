@@ -97,7 +97,7 @@ DELETE /zoos/ID/animals/ID：删除某个指定动物园的指定动物
 使用 HTTP 状态规范，在 response 中自定义 code 状态码的方法不推荐。
 
 | HTTP 状态码 | 说明                    |
-|:--------|--------:|
+|:--------|:--------|
 | 200      | GET 请求成功              |
 | 201      | POST/PUT/PATCH 修改数据成功 |
 | 204      | DELETE 删除数据成功         |
