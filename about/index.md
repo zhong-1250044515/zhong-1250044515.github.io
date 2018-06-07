@@ -4,8 +4,8 @@ title: 关于我
 tags: [about, Jekyll, theme, moon]
 date: 2016-03-21
 comments: false
+feature: assets/img/about.png
 ---
-## About Me
 Hello~ 我叫俊钟，也可以叫我小白，这是我的个人博客。
 
 我是从事互联网工作的一名小小的 PHPer，有点代码洁癖，喜欢折腾各种感兴趣的开源项目，因为折腾成功后的反馈会让我很兴奋~
