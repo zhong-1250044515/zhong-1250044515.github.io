@@ -8,7 +8,7 @@
 	background: $white;
 	color: $color_shark;
 	&:hover {
-		box-shadow: 0 0 1px 0 rgba($color_shark,0.5);
+		box-shadow: 0 2px 3px 0 rgba($color_shark,0.2);
 		color: $red;
 	}
 }
@@ -168,7 +168,7 @@ figure {
   }
 }
 svg:not(:root) {
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 // keyboard tag
