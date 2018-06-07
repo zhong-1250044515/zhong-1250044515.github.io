@@ -1,6 +1,5 @@
 ---
 layout: compress
-feature: {{ site.about_img }}
 ---
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -12,6 +11,7 @@ feature: {{ site.about_img }}
 </head>
 <body>
     {% include nav.html %}
+    {% if !page.feature %} 6666666666666666 {% assign page.feature = site.about_img %} {% else %} {{ page.feature }} {% endif %}
     <!-- Header -->
     <header class="header" role="banner">
         <div class="wrapper animated fadeIn">
