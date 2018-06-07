@@ -1,5 +1,6 @@
 ---
 layout: compress
+feature: {{ site.default_feature }}
 ---
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -11,7 +12,6 @@ layout: compress
 </head>
 <body>
     {% include nav.html %}
-    {% if !page.feature %} 6666666666666666 {% assign page.feature = site.default_feature %} {% endif %}
     <!-- Header -->
     <header class="header" role="banner">
         <div class="wrapper animated fadeIn">
