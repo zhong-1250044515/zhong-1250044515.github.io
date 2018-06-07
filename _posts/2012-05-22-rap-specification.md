@@ -5,7 +5,6 @@ date: 2018-06-06
 excerpt: "团队在使用 RAP 需要遵循的规范"
 tags: [技术文档]
 comments: false
-feature: http://i.imgur.com/Ds6S7lJ.png
 ---
 [RAP](http://rapapi.org/org/index.do) 是一个可视化接口管理工具。通过分析接口结构，动态生成模拟数据，校验真实接口正确性， 围绕接口定义，通过一系列自动化工具，对前后端接口交互开发进行解耦，以提升协作效率。
 

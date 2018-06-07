@@ -5,7 +5,6 @@ date: 2018-06-06
 excerpt: "关于 mysql 索引优化的建议。"
 tags: [技术文档]
 comments: false
-feature: http://i.imgur.com/Ds6S7lJ.png
 ---
 ## 什么时候需要建立索引
 

@@ -6,6 +6,8 @@ reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/logo.png'
 background:         'assets/img/bg/wallhaven-76255.jpg'
+about_img:          'assets/img/about/wallhaven-193651.jpg'
+default_feature:    'http://i.imgur.com/Ds6S7lJ.png'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
 url:                https://zhong-1250044515.github.io
