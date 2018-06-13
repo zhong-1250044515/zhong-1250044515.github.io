@@ -8,11 +8,15 @@ comments: false
 feature: http://i.imgur.com/Ds6S7lJ.png
 ---
 
+# Laravel Scout，Elasticsearch，ik 全文搜索
+
 ## Java 环境安装
 
-1. 检查是否已安装
+1.  检查是否已安装
 
-   `java -version`
+   ~~~ sh
+   java -version
+   ~~~
 
 2. [oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 官网下载 jdk 安装包(大于 1.8 版本)，我下载的是 jdk-8u171-linux-x64.tar.gz
 
@@ -167,50 +171,55 @@ config.vm.network "forwarded_port", guest: 9200, host: 62000, auto_correct: true
 
 1. 下载
 
-~~~ sh
-composer require tamayo/laravel-scout-elastic
-~~~
+   ~~~ sh
+   composer require tamayo/laravel-scout-elastic
+   ~~~
+
 
 2. 生成配置
 
-~~~ sh
-php artisan vendor:publish --provider="Laravel\Scout\ScoutServiceProvider"
-~~~
+   ~~~ sh
+   php artisan vendor:publish --provider="Laravel\Scout\ScoutServiceProvider"
+   ~~~
+
 
 3. `config/app.php` 添加对应的 ServiceProvider
 
-~~~ php
-<?php
-    return [
-    // ...
-        'providers' => [
-            // ...
-            Laravel\Scout\ScoutServiceProvider::class
-            ScoutEngines\Elasticsearch\ElasticsearchProvider::class
-        ],
-    // ...
-  ];
-~~~
+   ~~~ php
+   <?php
+       return [
+       // ...
+      'providers' => [
+        // ...
+        Laravel\Scout\ScoutServiceProvider::class
+        ScoutEngines\Elasticsearch\ElasticsearchProvider::class
+      ],
+       // ...
+     ];
+   ~~~
+
 
 4. 修改生成的 `config/scout.php`
 
-~~~ php
-'driver' => env('SCOUT_DRIVER', 'elasticsearch') // 默认 elasticsearch
-// 加上 elasticsearch 初始配置
-'elasticsearch' => [
-    'index' => env('ELASTICSEARCH_INDEX', 'laravel_search'),
-    'hosts' => [
-        env('ELASTICSEARCH_HOST', 'http://127.0.0.1:9200'),
-    ],
-],
-~~~
+   ~~~ php
+   'driver' => env('SCOUT_DRIVER', 'elasticsearch') // 默认 elasticsearch
+   // 加上 elasticsearch 初始配置
+   'elasticsearch' => [
+       'index' => env('ELASTICSEARCH_INDEX', 'laravel_search'),
+       'hosts' => [
+           env('ELASTICSEARCH_HOST', 'http://127.0.0.1:9200'),
+       ],
+   ],
+   ~~~
+
 
 5. 添加 `.env` 环境变量
 
-~~~makefile
-# 我使用 Homestead 环境，配置如下
-ELASTICSEARCH_HOST=http://192.168.10.10:9200
-~~~
+   ~~~ makefile
+   # 我使用 Homestead 环境，配置如下
+   ELASTICSEARCH_HOST=http://192.168.10.10:9200
+   ~~~
+
 ### 初始化 ES
 
 添加 InitEs 命令，初始化 ES 的一些数据
@@ -335,59 +344,60 @@ class InitEs extends Command
 
 1. Model 修改
 
-~~~ php
-<?php
+   ~~~ php
+   <?php
 
-namespace App;
+   namespace App;
 
-use Illuminate\Database\Eloquent\Model;
-use Laravel\Scout\Searchable;
+   use Illuminate\Database\Eloquent\Model;
+   use Laravel\Scout\Searchable;
 
-class Demo extends Model
-{
-    use Searchable;
-    protected $table = 'demos';
+   class Demo extends Model
+   {
+       use Searchable;
+       protected $table = 'demos';
 
-    /**
-     * 索引名称
-     *
-     * @return string
-     */
-    public function searchableAs()
-    {
-        return 'students_index';
-    }
+       /**
+        * 索引名称
+        *
+        * @return string
+        */
+       public function searchableAs()
+       {
+           return 'students_index';
+       }
 
-    /**
-     * 可搜索的数据索引
-     *
-     * @return array
-     */
-    public function toSearchableArray()
-    {
+       /**
+        * 可搜索的数据索引
+        *
+        * @return array
+        */
+       public function toSearchableArray()
+       {
         // $array = $this->toArray();
-        return [
-            'title' => $this->title,
-            'content' => $this->content
-        ];
-    }
-}
+           return [
+               'title' => $this->title,
+               'content' => $this->content
+           ];
+       }
+   }
+   ~~~
 
-~~~
+
 2. 把该表现有记录导入到搜索索引中
 
-~~~ php
-php artisan scout:import "App\Demo"
-# 正在导入
-Imported [App\Demo] models up to ID: 500
-Imported [App\Demo] models up to ID: 1000
-Imported [App\Demo] models up to ID: 1500
-Imported [App\Demo] models up to ID: 2000
-Imported [App\Demo] models up to ID: 2500
-Imported [App\Demo] models up to ID: 3000
-Imported [App\Demo] models up to ID: 3500
-All [App\Demo] records have been imported.
-~~~
+   ~~~ php
+   php artisan scout:import "App\Demo"
+   # 正在导入
+   Imported [App\Demo] models up to ID: 500
+   Imported [App\Demo] models up to ID: 1000
+   Imported [App\Demo] models up to ID: 1500
+   Imported [App\Demo] models up to ID: 2000
+   Imported [App\Demo] models up to ID: 2500
+   Imported [App\Demo] models up to ID: 3000
+   Imported [App\Demo] models up to ID: 3500
+   All [App\Demo] records have been imported.
+   ~~~
 
 ### 使用 ES 进行检索
 
@@ -399,4 +409,3 @@ $re = App\Demo::search('测试')->get();
 
 - [Elasticsearch 官方文档](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)
 - [Laravel5.5 Scout 使用文档](https://laravel-china.org/docs/laravel/5.5/scout/1346)
-
