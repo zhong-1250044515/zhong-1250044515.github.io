@@ -8,50 +8,46 @@ comments: false
 feature: http://i.imgur.com/Ds6S7lJ.png
 ---
 
-# Laravel Scout，Elasticsearch，ik 全文搜索
-
 ## Java 环境安装
 
-1.  检查是否已安装
+1. 检查是否已安装
 
    ~~~ sh
    java -version
    ~~~
 
-2. [oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 官网下载 jdk 安装包(大于 1.8 版本)，我下载的是 jdk-8u171-linux-x64.tar.gz
+1. [oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 官网下载 jdk 安装包(大于 1.8 版本)，我下载的是 jdk-8u171-linux-x64.tar.gz
 
-3. 在 /usr/ 目录下创建 java 目录，将安装包放在该目录下，解压
+2. 在 /usr/ 目录下创建 java 目录，将安装包放在该目录下，解压
 
-  ~~~ sh
-  mkdir /user/java
-  cd /usr/java
-  tar -zxvf jdk-8u171-linux-x64.tar.gz
-  ~~~
+   ~~~ sh
+   mkdir /user/java
+   cd /usr/java
+   tar -zxvf jdk-8u171-linux-x64.tar.gz
+   ~~~
 
-4. 设置环境变量
+3. 设置环境变量
 
-  ~~~ sh
-  vi /etc/profile
-  ~~~
+   ~~~ sh
+   vi /etc/profile
+   ~~~
 
-  添加以下内容
+   添加以下内容
 
-  ~~~ sh
-  #set java environment
-  JAVA_HOME=/usr/java/jdk1.7.0_79
-  JRE_HOME=/usr/java/jdk1.7.0_79/jre
-  CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
-  PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
-  export JAVA_HOME JRE_HOME CLASS_PATH PATH
-  ~~~
+   ~~~ sh
+   #set java environment
+   JAVA_HOME=/usr/java/jdk1.7.0_79
+   JRE_HOME=/usr/java/jdk1.7.0_79/jre
+   CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
+   PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
+   export JAVA_HOME JRE_HOME CLASS_PATH PATH
+   ~~~
 
-  修改生效
+   修改生效
 
-  ~~~ sh
-  source /etc/profile
-  ~~~
-
-
+   ~~~ sh
+   source /etc/profile
+   ~~~
 
 ## elasticsearch-rtf 安装
 
@@ -61,9 +57,9 @@ feature: http://i.imgur.com/Ds6S7lJ.png
 
 1. 下载项目
 
-  ~~~ sh
-  git clone git://github.com/medcl/elasticsearch-rtf.git elasticsearch
-  ~~~
+   ~~~ sh
+   git clone git://github.com/medcl/elasticsearch-rtf.git elasticsearch
+   ~~~
 
 2. 修改 `elasticsearch/config/elasticsearch.yml/elasticsearch.yml` 文件，将 `network.host` 改成 `0.0.0.0`
 
