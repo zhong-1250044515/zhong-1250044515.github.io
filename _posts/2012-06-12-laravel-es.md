@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Laravel Scout，Elasticsearch，ik 全文搜索"
-date: 2018-06-06
+date: 2018-06-12
 excerpt: "Laravel Scout，Elasticsearch，ik 全文搜索"
 tags: [技术文档]
 comments: false
