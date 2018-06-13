@@ -1,4 +1,12 @@
-# Laravel Scout，Elasticsearch，ik 全文搜索
+---
+layout: post
+title: "Laravel Scout，Elasticsearch，ik 全文搜索"
+date: 2018-06-06
+excerpt: "Laravel Scout，Elasticsearch，ik 全文搜索"
+tags: [技术文档]
+comments: false
+feature: http://i.imgur.com/Ds6S7lJ.png
+---
 
 ## Java 环境安装
 
