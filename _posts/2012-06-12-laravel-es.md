@@ -5,7 +5,7 @@ date: 2018-06-12
 excerpt: "Laravel Scout，Elasticsearch，ik 全文搜索"
 tags: [技术文档]
 comments: false
-feature: http://i.imgur.com/Ds6S7lJ.png
+feature: https://cm-alimama-upload-1253836176.file.myqcloud.com/txb/resource/156767337013.png
 ---
 
 ## Java 环境安装

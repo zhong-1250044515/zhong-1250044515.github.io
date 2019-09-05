@@ -1,14 +1,15 @@
 # Site
-title:              吴俊钟写字的地方
+title:              小白写字的地方
 bio:                '互联网的一条咸鱼😊'
 description:        "互联网的一条咸鱼😊"
 reading_time:       true
 words_per_minute:   200
-logo:               'assets/img/logo.png'
-background:         'assets/img/bg/wallhaven-76255.jpg'
+logo:               'https://cm-alimama-upload-1253836176.file.myqcloud.com/txb/resource/156765729470.png'
+background:         'https://cm-alimama-upload-1253836176.file.myqcloud.com/txb/resource/156765722557.jpeg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
-url:                https://zhong-1250044515.github.io
+# url:                https://zhong-1250044515.github.io
+url:                http://127.0.0.1:4000
 
 # Jekyll
 permalink:          /:title/

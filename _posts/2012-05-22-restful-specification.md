@@ -5,7 +5,7 @@ date: 2018-06-06
 excerpt: "在项目接口开发过程中，要求团队遵循的 RESTful API 设计规范。"
 tags: [技术文档]
 comments: false
-feature: http://i.imgur.com/Ds6S7lJ.png
+feature: https://cm-alimama-upload-1253836176.file.myqcloud.com/txb/resource/156767337013.png
 ---
 ## API 地址
 
