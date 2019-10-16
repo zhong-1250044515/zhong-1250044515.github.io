@@ -3,12 +3,12 @@ layout: post
 title: "MySQL 笔记 - 关于 change buffer"
 date: 2019-10-16
 excerpt: "普通索引的更新详解"
-tags: [技术文档]
+tags: [mysql]
 comments: true
 feature: https://cm-alimama-upload-1253836176.file.myqcloud.com/txb/resource/156767337013.png
 ---
 
-![image](https://user-gold-cdn.xitu.io/2019/5/24/16ae884d3bdb165f?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+![image](http://img.qingtingip.com/crawler/article/201971/dc70a3ac18bca10b9d3695664384367b)
 
 ``change buffer`` 是一种特殊的数据结构，占用 ``buffer pool`` 内存，用于缓存不在 ``buffer pool`` 中的**非唯一约束二级索引**的数据页的修改。
 
@@ -73,7 +73,6 @@ mysql> select * from t where k in (k1,k2);
 
 > ``redo log`` 记录了更新的动作，并依次执行刷脏页流程，实现批量顺序 IO。
 >真正对磁盘索引页数据修改，是通过将内存中的脏页刷回磁盘来完成的
-
 > ``redo log`` 节省随机写磁盘的 IO 消耗（转为顺序写），而 ``change buffer`` 节省随机读磁盘的 IO 消耗。
 
 ## change buffer 恢复
@@ -94,14 +93,14 @@ mysql> select * from t where k in (k1,k2);
 
 通过参数 ``innodb_change_buffering`` 可以控制InnoDB``change buffer`` 缓存的类型
 
-值 | 说明
----|---
-all |   默认值，缓存插入、删除标记操作和清除。
-none |  不缓存任何操作
-inserts |   缓存插入操作
-deletes |   缓存删除操作
-changes |   缓存插入和删除操作
-purages | 缓存发生在后台的物理删除操作
+值 | 说明|
+---|---|
+all |   默认值，缓存插入、删除标记操作和清除。|
+none |  不缓存任何操作|
+inserts |   缓存插入操作|
+deletes |   缓存删除操作|
+changes |   缓存插入和删除操作|
+purages | 缓存发生在后台的物理删除操作|
 
 可以通过MySQL配置文件（my.cnf 或 my.ini）或使用 ``set global`` 语句动态设置 ``innodb_change_buffering``，这要求 MySQL 账户拥有足够的权限（root 用户）。修改参数后不会影响 ``change buffer`` 中已缓存的修改。
 
