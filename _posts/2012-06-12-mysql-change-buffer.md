@@ -94,14 +94,14 @@ mysql> select * from t where k in (k1,k2);
 
 通过参数 ``innodb_change_buffering`` 可以控制InnoDB``change buffer`` 缓存的类型
 
-值 | 说明|
----|---|
-all |   默认值，缓存插入、删除标记操作和清除。|
-none |  不缓存任何操作|
-inserts |   缓存插入操作|
-deletes |   缓存删除操作|
-changes |   缓存插入和删除操作|
-purages | 缓存发生在后台的物理删除操作|
+ |值 | 说明|
+ |---|---|
+ |all |   默认值，缓存插入、删除标记操作和清除。|
+ |none |  不缓存任何操作|
+ |inserts |   缓存插入操作|
+ |deletes |   缓存删除操作|
+ |changes |   缓存插入和删除操作|
+ |purages | 缓存发生在后台的物理删除操作|
 
 可以通过MySQL配置文件（my.cnf 或 my.ini）或使用 ``set global`` 语句动态设置 ``innodb_change_buffering``，这要求 MySQL 账户拥有足够的权限（root 用户）。修改参数后不会影响 ``change buffer`` 中已缓存的修改。
 
