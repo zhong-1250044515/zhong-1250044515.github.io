@@ -73,6 +73,7 @@ mysql> select * from t where k in (k1,k2);
 
 > ``redo log`` 记录了更新的动作，并依次执行刷脏页流程，实现批量顺序 IO。
 >真正对磁盘索引页数据修改，是通过将内存中的脏页刷回磁盘来完成的
+
 > ``redo log`` 节省随机写磁盘的 IO 消耗（转为顺序写），而 ``change buffer`` 节省随机读磁盘的 IO 消耗。
 
 ## change buffer 恢复
