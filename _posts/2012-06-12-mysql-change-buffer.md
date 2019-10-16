@@ -4,7 +4,7 @@ title: "MySQL 笔记 - 关于 change buffer"
 date: 2019-10-16
 excerpt: "普通索引的更新详解"
 tags: [mysql]
-comments: true
+comments: false
 feature: https://cm-alimama-upload-1253836176.file.myqcloud.com/txb/resource/156767337013.png
 ---
 
