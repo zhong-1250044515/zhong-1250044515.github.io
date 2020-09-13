@@ -18,7 +18,7 @@ title: "文章"
             <div class="content">
                 <div class="post-title">
                     <h1>{{ page.title }}</h1>
-                    <a class="btn zoombtn" href="{{site.url}}">
+                    <a class="btn zoombtn" href="{{site.my_url}}">
                         <i class="fa fa-home"></i>
                     </a>
                 </div>
@@ -27,10 +27,10 @@ title: "文章"
                         {% if post.project == null %}
                     <ul>
                         <li class="wow fadeInLeft" data-wow-duration="1.5s">
-                            <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a><br>
+                            <a class="zoombtn" href="{{ site.my_url }}{{ post.url }}">{{ post.title }}</a><br>
                             <span class="time"><i class="fa fa-clock-o"></i> <small>{{ post.date | date: '%y/%m/%d' }}</small></span>
                             <p>{{ post.excerpt }}</p>
-                            <a href="{{ site.url }}{{ post.url }}" class="btn zoombtn">Read More</a>
+                            <a href="{{ site.my_url }}{{ post.url }}" class="btn zoombtn">Read More</a>
                         </li>
                     </ul>
                         {% endif %}
