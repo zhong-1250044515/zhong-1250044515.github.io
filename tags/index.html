@@ -21,7 +21,7 @@ comments: false
 	<h2 id="{{ this_word }}" class="tag-heading">{{ this_word }}</h2>
 		<ul>
     {% for post in site.tags[this_word] %}{% if post.title != null %}
-      <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a><span style="float:right" class="time">{{ post.date | date: '%y/%m/%d' }}</span></li>
+      <li class="entry-title"><a href="{{ site.my_url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a><span style="float:right" class="time">{{ post.date | date: '%y/%m/%d' }}</span></li>
     {% endif %}{% endfor %}
 		</ul>
 	</article><!-- /.hentry -->
