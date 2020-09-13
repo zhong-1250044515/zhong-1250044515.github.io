@@ -9,7 +9,7 @@ background:         'https://cm-alimama-upload-1253836176.file.myqcloud.com/txb/
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
 url:                https://zhong-1250044515.github.io
-my_url:             http://zhong1250044515.cn
+my_url:             https://zhong1250044515.cn
 # url:                http://127.0.0.1:4000
 
 # Jekyll
